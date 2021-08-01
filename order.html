@@ -13,36 +13,123 @@
     <title>your order</title>
 </head>
 <body>
-    <div>
+    <div class="container">
         <h5>choose your pizza</h5>
         <div class="input-group mb-3">
-            <label class="input-group-text" for="inputGroupSelect01">small</label>
+            <label class="input-group-text" for="inputGroupSelect01">size</label>
             <select class="form-select" id="inputGroupSelect01">
-              <option selected>Choose...</option>
-              <option value="1">Crispy</option>
-              <option value="2">Stuffed</option>
-              <option value="3">Gluten-free</option>
+              <option value="1">small-ksh 500</option>
+              <option value="2">medium -ksh 750</option>
+              <option value="3">large  -ksh 1000</option>
             </select>
         </div>    
         <div class="input-group mb-3">
-            <label class="input-group-text" for="inputGroupSelect01">medium</label>
+            <label class="input-group-text" for="inputGroupSelect01">crest</label>
             <select class="form-select" id="inputGroupSelect01">
-              <option selected>Choose...</option>
-              <option value="1">Crispy</option>
-              <option value="2">Stuffed</option>
-              <option value="3">Gluten-free</option>
+              <option value="1">Crispy  -ksh 100</option>
+              <option value="2">Stuffed -ksh 150</option>
+              <option value="3">Gluten-free -ksh 200</option>
             </select>
         </div>    
-        <div class="input-group mb-3">
-            <label class="input-group-text" for="inputGroupSelect01">large</label>
-            <select class="form-select" id="inputGroupSelect01">
-              <option selected>Choose...</option>
-              <option value="1">Crispy</option>
-              <option value="2">Stuffed</option>
-              <option value="3">Gluten-free</option>
-            </select>
+        
+        <h2>toppings</h2>
+            
+
+            <form>
+                <input type="checkbox" id="vehicle1" name="pepperoni" value="pepperoni">
+                <label for="pepperoni"> pepperoni</label><br>
+                <input type="checkbox" id="mushrooms" name="mushrooms" value="mushrooms">
+                <label for="mushrooms">mushrooms</label><br>
+                <input type="checkbox" id="green-peppers" name="green-peppers" value="green-peppers">
+                <label for="green-peppers">green peppers</label><br>
+                <input type="checkbox" id="nyama-choma" name="nyama-choma" value="nyama-choma">
+                <label for="nyama-choma">nyama choma</label><br>
+                <input type="checkbox" id="bacon" name="bacon" value="bacon">
+                <label for="bacon">Bacon</label><br>
+                <input type="checkbox" id="mushrooms" name="mushrooms" value="mushrooms">
+                <label for="mushrooms">mushrooms</label><br>
+            </form>   
+            <button type="submit" class="btn btn-outline-success button2">Add to Cart  <i class="fas fa-shopping-cart"></i></button>
+            
         </div>    
     </div>
-    
+    <div class="col-md-6">
+        <div class="cart">
+            <div id="show-checkout">
+              <h2>Cart Checkout</h2>
+              <h4>Total: Ksh.<span class="total-cart"></span></h4>
+            </div>
+            <div>
+                <ol id="cart">
+
+                </ol>
+            </div>
+            <div id="show-pizza">
+                <p id="pizzaName">
+                    <ul>
+                        <li>Size: <span class="size"></span></li>
+                        <li>Crust: <span class="crust"></span></li>
+                        <li>Toppings: <span class="toppings"></span></li>
+                        <li>Cost: Ksh.<span class="cost"></span></li>
+                    </ul>
+                </p>
+            </div>
+            <button class="btn btn-outline-danger button2" id="checkout" >Checkout</button>
+            </div>
+
+            <div class="pickup-delivery">
+                <h4>Select a delivery Method</h4>
+                <p><strong>Pickup Station </strong>Ready for pickup immediately after placing an order</p>
+                <button type="button" class="btn btn-outline-primary button2" id="pickup">Pickup Station</button>
+                <p><strong>Express Delivery </strong> We offer express delivery within Nairobi at a cost of ksh.300</p>
+                <button type="button" class="btn btn-outline-primary button2" id="delivery">Delivery to your home or office  <i class="fas fa-truck"></i></button>
+            </div>
+
+            <div class="pickupNow">
+                <form id="pickupForm">
+                    <div class="form-group">
+                        <label for="name">Enter the full name of the person picking up the order</label>
+                        <input type="text" placeholder="Name" class="form-control text-input" id="pickupName">
+                    </div>
+                    <button type="submit" class="btn btn-outline-success button2" id="button-pickup">Submit</button>
+                </form>
+                <a href="index.html" class="button">Home <i class="fas fa-home"></i></a>
+            </div>
+
+            <div class="deliveryNow">
+                <form id="deliveryForm">
+                    <div class="form-group">
+                        <label for="name">Enter Your Full Name</label>
+                        <input type="text" placeholder="Name" id="deliveryName" class="form-control text-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Enter Your Home or Office Address</label>
+                        <input type="text" placeholder="Address" id="address" class="form-control text-input" required>
+                    </div>
+                    <button type="submit" class="btn btn-outline-success button2" id="submitDeliveryForm">Submit</button>
+                </form>
+                <a href="index.html" class="button">Home <i class="fas fa-home"></i></a>
+            </div>
+      </div>
+</div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Message Received</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modal-body">
+         ...
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+        </div>
+  </div>
+</div>
+</div>
 </body>
 </html>
