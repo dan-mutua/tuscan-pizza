@@ -3,3 +3,7 @@ body{
     color: white;
     
 }
+
+.checkout{
+    display: none;
+}
