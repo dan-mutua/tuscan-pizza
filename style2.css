@@ -1,0 +1,21 @@
+body{
+    background-image: url("./assets/My\ Post\ \(1\).png");
+    color: white;
+    
+}
+
+.checkout{
+    display: none;
+}
+
+body{
+ margin-top: 50px;
+}
+
+.cartP,
+.pd,
+.pickup,
+.delivery,
+#showww{
+    display: none;
+}
