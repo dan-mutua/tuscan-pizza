@@ -106,13 +106,13 @@ $(document).ready(function() {
         $(".delivery").show();
     });
 
-    $("button#submitDeliveryForm").click(function(event) {
+    $("button#submitDelivery").click(function(event) {
         event.preventDefault();
         var userName = $("input#deliveryName").val();
         var address = $("input#address").val();
         $(".cartP").hide();
         $("form#pizzaForm").hide();
-        $("form#deliveryForm").hide();
+        $("form#form").hide();
         var myModal = new bootstrap.Modal(document.getElementById('modal'), {backdrop: true});
         var message = ("Ciao " + userName + " your pizza will be delivered soon")
         console.log();
