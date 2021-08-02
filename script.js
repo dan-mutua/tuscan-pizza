@@ -54,7 +54,7 @@ $(document).ready(function() {
         total += newPizza.price;
 
         $(".total-cart").text(total);
-        $(".cartWell").show();;
+        $(".cartP").show();;
         $("#cartHeader").show();
         $("ol#cart").append("<li><span class='cartItem'>" + newPizza.size + " " + newPizza.crust + " Pizza" + "</span></li>");
 
@@ -70,12 +70,12 @@ $(document).ready(function() {
 
     $("button#checkout").click(function() {
         $("#show-pizza").hide();
-        $(".pickup-delivery").show();
+        $(".pd").show();
     });
 
     $("button#pickup").click(function() {
-        $(".pickup-delivery").hide();
-        $(".pickupNow").show();
+        $(".pd").hide();
+        $(".pickup").show();
     });
 
     $("button#button-pickup").click(function(event) {
@@ -83,7 +83,7 @@ $(document).ready(function() {
         var userName = $("input#pickupName").val();
         // $(".name-input").text(userName);
         $("form#pickupForm").hide();
-        $(".cartWell").hide();
+        $(".cartP").hide();
         $("form#pizza").hide();
         var myModal = new bootstrap.Modal(document.getElementById('modal'), {backdrop: true});
         if (userName){
@@ -100,7 +100,7 @@ $(document).ready(function() {
     $("button#delivery").click(function() {
         total += 300;
         $(".total-cart").text(total);
-        $(".pickup-delivery").hide();
+        $(".pd").hide();
         $(".deliveryNow").show();
     });
 
@@ -108,7 +108,7 @@ $(document).ready(function() {
         event.preventDefault();
         var userName = $("input#deliveryName").val();
         var address = $("input#address").val();
-        $(".cartWell").hide();
+        $(".cartP").hide();
         $("form#pizzaForm").hide();
         $("form#deliveryForm").hide();
         var myModal = new bootstrap.Modal(document.getElementById('modal'), {backdrop: true});

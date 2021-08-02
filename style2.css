@@ -12,9 +12,9 @@ body{
  margin-top: 50px;
 }
 
-.cartWell,
-.pickup-delivery,
-.pickupNow,
+.cartP,
+.pd,
+.pickup,
 .deliveryNow,
 #show-pizza{
     display: none;
