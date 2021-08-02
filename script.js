@@ -59,7 +59,7 @@ $(document).ready(function() {
         $("ol#cart").append("<li><span class='cartItem'>" + newPizza.size + " " + newPizza.crust + " Pizza" + "</span></li>");
 
         $(".cartItem").last().click(function() {
-            $("#show-pizza").show();
+            $("#showww").show();
             $(".size").text(newPizza.size);
             $(".crust").text(newPizza.crust);
             $(".toppings").text(newPizza.toppingsList());
@@ -69,7 +69,7 @@ $(document).ready(function() {
     });
 
     $("button#checkout").click(function() {
-        $("#show-pizza").hide();
+        $("#showww").hide();
         $(".pd").show();
     });
 
@@ -86,9 +86,11 @@ $(document).ready(function() {
         $(".cartP").hide();
         $("form#pizza").hide();
         var myModal = new bootstrap.Modal(document.getElementById('modal'), {backdrop: true});
+        var message =("Hello " +userName +", Ciao thank you for ordering your pizza with us .your order will be ready soon.");
+        console.log(message)
         if (userName){
-            $("#modal-body").html(" Hello " + userName + ", Ciao thank you for ordering your pizza with us .your order will be ready soon.");
-            $("#modalLabel").html("Your Order has been successfully confirmed.");
+            $("#modal-body").html();
+            $("#modalLabel").html();
             myModal.show();
         } else {
             $("#modal-body").html("Please enter your name!!");
@@ -101,7 +103,7 @@ $(document).ready(function() {
         total += 300;
         $(".total-cart").text(total);
         $(".pd").hide();
-        $(".deliveryNow").show();
+        $(".delivery").show();
     });
 
     $("button#submitDeliveryForm").click(function(event) {
@@ -113,6 +115,7 @@ $(document).ready(function() {
         $("form#deliveryForm").hide();
         var myModal = new bootstrap.Modal(document.getElementById('modal'), {backdrop: true});
         var message = ("Ciao " + userName + " your pizza will be delivered soon")
+        console.log();
         if (userName && address){
             console.log(message)
             $("#modal-body").html();
