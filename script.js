@@ -84,17 +84,17 @@ $(document).ready(function() {
         $("form#pForm").hide();
         $(".cartP").hide();
         $("form#pizza").hide();
-        var myModal = new bootstrap.Modal(document.getElementById('modal'), {backdrop: true});
+        var mytus = new bootstrap.tus(document.getElementById('tus'), {backdrop: true});
         var message =("Ciao " +userName +", thank you for ordering your pizza with us your order will be ready soon for pickup.");
         console.log(message)
         if (userName){
-            $("#modal-body").html(message);
-            $("#modalLabel").html();
-            myModal.show();
+            $("#tus-body").html(message);
+            $("#tusLabel").html();
+            mytus.show();
         } else {
-            $("#modal-body").html("input your name");
-            $("#modalLabel").html("Invalid input!");
-             myModal.show();
+            $("#tus-body").html("input your name");
+            $("#tusLabel").html("Invalid input!");
+             mytus.show();
         }
     });
         
@@ -112,18 +112,18 @@ $(document).ready(function() {
         $(".cartP").hide();
         $("form#pform").hide();
         $("form#form").hide();
-        var myModal = new bootstrap.Modal(document.getElementById('modal'), {backdrop: true});
+        var mytus = new bootstrap.tus(document.getElementById('tus'), {backdrop: true});
         var message = ("Ciao " + userName + " your pizza will be delivered soon in " + address)
         console.log();
         if (userName && address){
             console.log(message)
-            $("#modal-body").html(message);
-            $("#modalLabel").html();
-            myModal.show();
+            $("#tus-body").html(message);
+            $("#tusLabel").html();
+            mytus.show();
         } else {
-            $("#modal-body").html("we need your name and address");
-            $("#modalLabel").html("Invalid input!");
-             myModal.show();
+            $("#tus-body").html("we need your name and address");
+            $("#tusLabel").html("Invalid input!");
+             mytus.show();
         }
     });
 });
