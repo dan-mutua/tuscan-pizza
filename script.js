@@ -78,14 +78,14 @@ $(document).ready(function() {
         $(".pickup").show();
     });
 
-    $("button#button-pickup").click(function(event) {
+    $("button#bpickup").click(function(event) {
         event.preventDefault();
         var userName = $("input#pickN").val();
         $("form#pickupForm").hide();
         $(".cartP").hide();
         $("form#pizza").hide();
         var myModal = new bootstrap.Modal(document.getElementById('modal'), {backdrop: true});
-        var message =("Ciao " +userName +", thank you for ordering your pizza with us .your order will be ready soon.");
+        var message =("Ciao " +userName +", thank you for ordering your pizza with us your order will be ready soon for pickup.");
         console.log(message)
         if (userName){
             $("#modal-body").html(message);
@@ -97,7 +97,7 @@ $(document).ready(function() {
              myModal.show();
         }
     });
-
+        
     $("button#delivery").click(function() {
         total += 300;
         $(".total-cart").text(total);
@@ -121,7 +121,7 @@ $(document).ready(function() {
             $("#modalLabel").html();
             myModal.show();
         } else {
-            $("#modal-body").html("Please enter your name and address!!");
+            $("#modal-body").html("we need your name and address");
             $("#modalLabel").html("Invalid input!");
              myModal.show();
         }
