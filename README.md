@@ -19,9 +19,9 @@ This a two page website for Tuscan pizza shop, which we were supposed to do as o
 * Live link to view the project <a href="https://dan-mutua.github.io/tuscan-pizza/index.html">Tuscan pizza</a>
 ## Some Screenshots
 <img src="./assets/screenshot1.png" alt="screenshot 1" />
-<img src="./assets/Screenshot2.png" alt="screenshot 2" />
-<img src="./assets/Screenshot3.png" alt="screenshot 3" />
-<img src="./assets/Screenshot4.png" alt="screenshot 4" />
+<img src="./assets/screenshot2.png" alt="screenshot 2" />
+<img src="./assets/screenshot3.png" alt="screenshot 3" />
+<img src="./assets/screenshot4.png" alt="screenshot 4" />
 
 
 ## Known Bugs
