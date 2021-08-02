@@ -81,7 +81,7 @@ $(document).ready(function() {
     $("button#bpickup").click(function(event) {
         event.preventDefault();
         var userName = $("input#pickN").val();
-        $("form#pickupForm").hide();
+        $("form#pForm").hide();
         $(".cartP").hide();
         $("form#pizza").hide();
         var myModal = new bootstrap.Modal(document.getElementById('modal'), {backdrop: true});
