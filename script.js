@@ -35,11 +35,11 @@ Pizza.prototype.toppingsList = function() {
       return "None";
     }
 }
-// User Interface Logic
+// User Interface 
 $(document).ready(function() {
     var total = 0;
     $(".total-cart").text(total);
-    $(".pizzaForm").submit(function(event) {
+    $(".pform").submit(function(event) {
         event.preventDefault();
         var crust = $("#crust").val();
         var size = $("#size").val();
@@ -65,7 +65,7 @@ $(document).ready(function() {
             $(".toppings").text(newPizza.toppingsList());
             $(".cost").text(newPizza.price);
         });
-        $("#pizzaForm")[0].reset();
+        $("#pform")[0].reset();
     });
 
     $("button#checkout").click(function() {
@@ -81,7 +81,6 @@ $(document).ready(function() {
     $("button#button-pickup").click(function(event) {
         event.preventDefault();
         var userName = $("input#pickupName").val();
-        // $(".name-input").text(userName);
         $("form#pickupForm").hide();
         $(".cartP").hide();
         $("form#pizza").hide();
@@ -111,7 +110,7 @@ $(document).ready(function() {
         var userName = $("input#deliveryName").val();
         var address = $("input#address").val();
         $(".cartP").hide();
-        $("form#pizzaForm").hide();
+        $("form#pform").hide();
         $("form#form").hide();
         var myModal = new bootstrap.Modal(document.getElementById('modal'), {backdrop: true});
         var message = ("Ciao " + userName + " your pizza will be delivered soon")
