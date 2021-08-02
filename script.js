@@ -80,19 +80,19 @@ $(document).ready(function() {
 
     $("button#button-pickup").click(function(event) {
         event.preventDefault();
-        var userName = $("input#pickupName").val();
+        var userName = $("input#pickN").val();
         $("form#pickupForm").hide();
         $(".cartP").hide();
         $("form#pizza").hide();
         var myModal = new bootstrap.Modal(document.getElementById('modal'), {backdrop: true});
-        var message =("Hello " +userName +", Ciao thank you for ordering your pizza with us .your order will be ready soon.");
+        var message =("Ciao " +userName +", thank you for ordering your pizza with us .your order will be ready soon.");
         console.log(message)
         if (userName){
             $("#modal-body").html(message);
             $("#modalLabel").html();
             myModal.show();
         } else {
-            $("#modal-body").html("yoyo");
+            $("#modal-body").html("input your name");
             $("#modalLabel").html("Invalid input!");
              myModal.show();
         }
@@ -107,17 +107,17 @@ $(document).ready(function() {
 
     $("button#submitDelivery").click(function(event) {
         event.preventDefault();
-        var userName = $("input#deliveryName").val();
+        var userName = $("input#yourdelivery").val();
         var address = $("input#address").val();
         $(".cartP").hide();
         $("form#pform").hide();
         $("form#form").hide();
         var myModal = new bootstrap.Modal(document.getElementById('modal'), {backdrop: true});
-        var message = ("Ciao " + userName + " your pizza will be delivered soon")
+        var message = ("Ciao " + userName + " your pizza will be delivered soon in " + address)
         console.log();
         if (userName && address){
             console.log(message)
-            $("#modal-body").html();
+            $("#modal-body").html(message);
             $("#modalLabel").html();
             myModal.show();
         } else {
