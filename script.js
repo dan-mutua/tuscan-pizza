@@ -88,11 +88,11 @@ $(document).ready(function() {
         var message =("Hello " +userName +", Ciao thank you for ordering your pizza with us .your order will be ready soon.");
         console.log(message)
         if (userName){
-            $("#modal-body").html();
+            $("#modal-body").html(message);
             $("#modalLabel").html();
             myModal.show();
         } else {
-            $("#modal-body").html("Please enter your name!!");
+            $("#modal-body").html("yoyo");
             $("#modalLabel").html("Invalid input!");
              myModal.show();
         }
