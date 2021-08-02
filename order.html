@@ -8,114 +8,135 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./style2.css">
     <title>your order</title>
 </head>
 <body>
     <div class="container">
-        <h5>choose your pizza</h5>
-        <div class="input-group mb-3 size">
-            <label class="input-group-text" for="inputGroupSelect01">size</label>
-            <select class="form-select" id="inputGroupSelect01">
-              <option value="1">small-ksh 500</option>
-              <option value="2">medium -ksh 750</option>
-              <option value="3">large  -ksh 1000</option>
-            </select>
-        </div>    
-        <div class="input-group mb-3 crust">
-            <label class="input-group-text" for="inputGroupSelect01">crest</label>
-            <select class="form-select" id="inputGroupSelect01">
-              <option value="1">Crispy  -ksh 100</option>
-              <option value="2">Stuffed -ksh 150</option>
-              <option value="3">Gluten-free -ksh 200</option>
-            </select>
-        </div>    
-        
-        <h2>toppings</h2>
-            
-
-            <form>
-                <input type="checkbox" id="vehicle1" name="pepperoni" value="pepperoni">
-                <label for="pepperoni"> pepperoni</label><br>
-                <input type="checkbox" id="mushrooms" name="mushrooms" value="mushrooms">
-                <label for="mushrooms">mushrooms</label><br>
-                <input type="checkbox" id="green-peppers" name="green-peppers" value="green-peppers">
-                <label for="green-peppers">green peppers</label><br>
-                <input type="checkbox" id="nyama-choma" name="nyama-choma" value="nyama-choma">
-                <label for="nyama-choma">nyama choma</label><br>
-                <input type="checkbox" id="bacon" name="bacon" value="bacon">
-                <label for="bacon">Bacon</label><br>
+        <div class="row">
+            <div class="col-md-6">
+                <h5>choose your pizza</h5>
+                <form class="pizzaForm">
                 
-            </form>   
-            <button type="submit" class="btn btn-secondary">Add to Cart  <i class="fas fa-shopping-cart"></i></button>
-            
-        </div>    
-    </div>
-    <div class="col-md-6 container checkout">
-        <div class="cart ">
-            <div id="show-checkout">
-              <h2>Cart Checkout</h2>
-              <h4>Total: Ksh.<span class="total-cart"></span></h4>
+                    <label for="size">size</label>
+                    <select class="form-control" id="size">
+                    <option value="small">small-ksh 500</option>
+                    <option value="medium">medium -ksh 750</option>
+                    <option value="large">large  -ksh 1000</option>
+                    </select>
+                
+                
+                    <label for="crust">crest</label>
+                    <select class="form-control" id="crust">
+                    <option value="crispy">Crispy  -ksh 100</option>
+                    <option value="stuffed">Stuffed -ksh 150</option>
+                    <option value="gluten">Gluten-free -ksh 200</option>
+                    </select>
+                    <div>
+                        <h2>toppings</h2>
+                        <input type="checkbox" id="vehicle1" name="topping" value="pepperoni">
+                        <label> pepperoni</label><br>
+                        <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
+                        <label>mushrooms</label><br>
+                        <input type="checkbox" id="green-peppers" name="topping" value="green-peppers">
+                        <label>green peppers</label><br>
+                        <input type="checkbox" id="nyama-choma" name="topping" value="nyama-choma">
+                        <label>nyama choma</label><br>
+                        <input type="checkbox" id="bacon" name="topping" value="bacon">
+                        <label>Bacon</label><br>
+                        
+                    </div>   
+                    <button type="submit" class="btn btn-secondary">Add to Cart  <i class="fas fa-shopping-cart"></i></button>
+                </form>
             </div>
-            <div>
-                <ol id="cart">
+           
+    
+        <div class="col-md-6 ">
+                <div class="cartWell">
+                    <div id="show-cart">
+                    <h2>Cart Checkout</h2>
+                    <h4>Total: Ksh.<span class="total-cart"></span></h4>
+                    </div>
+                    <div>
+                        <ol id="cart">
 
-                </ol>
-            </div>
-            <div id="show-pizza">
-                <p id="pizzaName">
-                    <ul>
-                        <li>Size: <span class="size"></span></li>
-                        <li>Crust: <span class="crust"></span></li>
-                        <li>Toppings: <span class="toppings"></span></li>
-                        <li>Cost: Ksh.<span class="cost"></span></li>
-                    </ul>
-                </p>
-            </div>
-            <button class="btn btn-secondary" id="checkout" >Checkout</button>
+                        </ol>
+                    </div>
+                    <div id="show-pizza">
+                        <p id="pizzaName">
+                            <ul>
+                                <li>Size: <span class="size"></span></li>
+                                <li>Crust: <span class="crust"></span></li>
+                                <li>Toppings: <span class="toppings"></span></li>
+                                <li>Cost: Ksh.<span class="cost"></span></li>
+                            </ul>
+                        </p>
+                    </div>
+                    <button class="btn btn-secondary" id="checkout" >Checkout</button>
+                </div>
+
+                <div class="pickup-delivery">
+                    <h4>Select a delivery Method</h4>
+                    <p><strong>Pickup Station </strong>Ready for pickup immediately after placing an order</p>
+                    <button type="button" class="btn btn-secondary" id="pickup">Pickup Station</button>
+                    <p><strong>Express Delivery </strong> We offer express delivery within thika road at a cost of ksh.300</p>
+                    <button type="button" class="btn btn-secondary" id="delivery">Delivery to your home <i class="fas fa-truck"></i></button>
+                </div>
+
+                <div class="pickupNow">
+                    <form id="pickupForm">
+                        <div class="form-group">
+                            <label for="name">Enter the  name of the person picking up the order</label>
+                            <input type="text" placeholder="Name" class="form-control text-input" id="pickupName">
+                        </div>
+                        <button type="submit" class="btn btn-secondary" id="button-pickup">Submit</button>
+                    </form>
+                    <a href="index.html" class="button btn btn-secondary">Home <i class="fas fa-home"></i></a>
+                </div>
+
+                <div class="deliveryNow">
+                    <form id="deliveryForm">
+                        <div class="form-group">
+                            <label for="name">Enter Your  Name</label>
+                            <input type="text" placeholder="Name" id="deliveryName" class="form-control text-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Enter Your  Address</label>
+                            <input type="text" placeholder="Address" id="address" class="form-control text-input" required>
+                        </div>
+                        <button type="submit" class="btn btn-secondary" id="submitDeliveryForm">Submit</button>
+                    </form>
+                    <a href="index.html" class="button">Home <i class="fas fa-home"></i></a>
+                </div>
         </div>
-
-            <div class="pickup-delivery">
-                <h4>Select a delivery Method</h4>
-                <p><strong>Pickup Station </strong>Ready for pickup immediately after placing an order</p>
-                <button type="button" class="btn btn-secondary" id="pickup">Pickup Station</button>
-                <p><strong>Express Delivery </strong> We offer express delivery within Nairobi at a cost of ksh.300</p>
-                <button type="button" class="btn btn-secondary" id="delivery">Delivery to your home or office  <i class="fas fa-truck"></i></button>
-            </div>
-
-            <div class="pickupNow">
-                <form id="pickupForm">
-                    <div class="form-group">
-                        <label for="name">Enter the full name of the person picking up the order</label>
-                        <input type="text" placeholder="Name" class="form-control text-input" id="pickupName">
-                    </div>
-                    <button type="submit" class="btn btn-secondary" id="button-pickup">Submit</button>
-                </form>
-                <a href="index.html" class="button btn btn-secondary">Home <i class="fas fa-home"></i></a>
-            </div>
-
-            <div class="deliveryNow">
-                <form id="deliveryForm">
-                    <div class="form-group">
-                        <label for="name">Enter Your Full Name</label>
-                        <input type="text" placeholder="Name" id="deliveryName" class="form-control text-input" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="name">Enter Your Home or Office Address</label>
-                        <input type="text" placeholder="Address" id="address" class="form-control text-input" required>
-                    </div>
-                    <button type="submit" class="btn btn-secondary" id="submitDeliveryForm">Submit</button>
-                </form>
-                <a href="index.html" class="button">Home <i class="fas fa-home"></i></a>
-            </div>
     </div>
 </div>
-</div>
 
 
 
-</body>
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Message Received</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                 ...
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+                </div>
+          </div>
+        </div>
+    </div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="./script.js" ></script>
+
+</body>
 </html>

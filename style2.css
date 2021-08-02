@@ -7,3 +7,15 @@ body{
 .checkout{
     display: none;
 }
+
+body{
+ margin-top: 50px;
+}
+
+.cartWell,
+.pickup-delivery,
+.pickupNow,
+.deliveryNow,
+#show-pizza{
+    display: none;
+}
