@@ -112,9 +112,11 @@ $(document).ready(function() {
         $("form#pizzaForm").hide();
         $("form#deliveryForm").hide();
         var myModal = new bootstrap.Modal(document.getElementById('modal'), {backdrop: true});
+        var message = ("Ciao " + userName + " your pizza will be delivered soon")
         if (userName && address){
-            $("#modal-body").html(" Hello " + userName + ", your order will be delivered to your location. Thank you for shopping on L'ora della Pizza");
-            $("#modalLabel").html("Your Order has been successfully confirmed.");
+            console.log(message)
+            $("#modal-body").html();
+            $("#modalLabel").html();
             myModal.show();
         } else {
             $("#modal-body").html("Please enter your name and address!!");
